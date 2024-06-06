@@ -18,7 +18,7 @@
 <body>
 <form action="logica/registro_usuarios.php" method="post">
         <label>Nombre</label>
-        <input type="text" name="nombre_equipo">
+        <input type="text" name="nombre_completo">
         <label>Nombre de Usuario</label>
         <input type="text" name="nombre_usuario">
         <label>Contraseña</label>

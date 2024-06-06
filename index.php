@@ -12,6 +12,13 @@
     <title>Copa america</title>
 </head>
 <body>
+
+
+
+
+
+
+
     <form action="logica/registro_equipos.php" method="post">
         <label>Name:</label>
         <input type="text" name="nombre_equipo">
