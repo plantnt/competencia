@@ -11,6 +11,7 @@ $nombre_tecnico=$_POST["nombre_tecnico"];
 $sql="INSERT INTO equipos VALUE ('0','$nombre_equipo','$num_jugadores','$nombre_tecnico')";
 $result=mysqli_query($servidor,$sql) or die ("Error en consulta<br>MySQL dice: ".mysqli_error());
 
-header("location:../index.php");
+header("location:reg_tabla_posiciones.php?equipo=$nombre_equipo");
+
 
 ?>
