@@ -20,9 +20,9 @@ $resultado=mysqli_query($servidor,$verequipos);
     <title>Crear Partido</title>
 </head>
 <body>
-    <form action="save_match.php" method="post">
-        <label for="local_team">Equipo Local:</label>
-        <select name="" id="">
+    <form method="post" action="logica/reg_partido.php">
+        <label>Equipo Local:</label>
+        <select name="local" id="">
             <?php
             while($regequipos= mysqli_fetch_array($resultado)){
                 $id_equipo=$regequipos["id"];
@@ -35,8 +35,9 @@ $resultado=mysqli_query($servidor,$verequipos);
              }
              ?>
         </select>
+        VS
         <label for="local_team">Equipo Visitante:</label>
-        <select name="" id="">
+        <select name="visitante" id="">
             <?php
             $verequiposs="SELECT * FROM equipos";
             $resultadoo=mysqli_query($servidor,$verequiposs);
@@ -52,8 +53,8 @@ $resultado=mysqli_query($servidor,$verequipos);
              ?>
         </select>
         <label for="match_date">Fecha del Partido:</label>
-        <input type="date" id="match_date" name="match_date"><br><br>
+        <input type="date" id="match_date" name="date"><br><br>
         <label for="match_time">Hora del Partido:</label>
-        <input type="time" id="match_time" name="match_time"><br><br>
+        <input type="time" id="match_time" name="time"><br><br>
         <input type="submit" value="Crear Partido">
     </form>
